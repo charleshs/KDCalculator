@@ -3,16 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7C8D0DC3262A050900E2D435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D0DC2262A050900E2D435 /* AppDelegate.swift */; };
 		7C8D0DC5262A050900E2D435 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D0DC4262A050900E2D435 /* SceneDelegate.swift */; };
 		7C8D0DC7262A050900E2D435 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D0DC6262A050900E2D435 /* ViewController.swift */; };
-		7C8D0DCA262A050900E2D435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8D0DC8262A050900E2D435 /* Main.storyboard */; };
 		7C8D0DCC262A050B00E2D435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C8D0DCB262A050B00E2D435 /* Assets.xcassets */; };
 		7C8D0DCF262A050B00E2D435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8D0DCD262A050B00E2D435 /* LaunchScreen.storyboard */; };
+		7C8D0E04262AE28D00E2D435 /* KeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D0E03262AE28D00E2D435 /* KeypadButton.swift */; };
+		7C8D0E07262AE4C900E2D435 /* CalculatorKeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D0E06262AE4C900E2D435 /* CalculatorKeypadView.swift */; };
+		7C8D0E13262AF1F700E2D435 /* StackKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7C8D0E12262AF1F700E2D435 /* StackKit */; };
+		7C8D0E18262AF3DC00E2D435 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D0E17262AF3DC00E2D435 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,12 @@
 		7C8D0DC2262A050900E2D435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C8D0DC4262A050900E2D435 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7C8D0DC6262A050900E2D435 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7C8D0DC9262A050900E2D435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C8D0DCB262A050B00E2D435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C8D0DCE262A050B00E2D435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C8D0DD0262A050B00E2D435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C8D0E03262AE28D00E2D435 /* KeypadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadButton.swift; sourceTree = "<group>"; };
+		7C8D0E06262AE4C900E2D435 /* CalculatorKeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorKeypadView.swift; sourceTree = "<group>"; };
+		7C8D0E17262AF3DC00E2D435 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8D0E13262AF1F700E2D435 /* StackKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,25 @@
 		7C8D0DC1262A050900E2D435 /* KDCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				7C8D0E16262AF3BB00E2D435 /* Extensions */,
 				7C8D0DC2262A050900E2D435 /* AppDelegate.swift */,
 				7C8D0DC4262A050900E2D435 /* SceneDelegate.swift */,
 				7C8D0DC6262A050900E2D435 /* ViewController.swift */,
-				7C8D0DC8262A050900E2D435 /* Main.storyboard */,
+				7C8D0E03262AE28D00E2D435 /* KeypadButton.swift */,
+				7C8D0E06262AE4C900E2D435 /* CalculatorKeypadView.swift */,
 				7C8D0DCB262A050B00E2D435 /* Assets.xcassets */,
 				7C8D0DCD262A050B00E2D435 /* LaunchScreen.storyboard */,
 				7C8D0DD0262A050B00E2D435 /* Info.plist */,
 			);
 			path = KDCalculator;
+			sourceTree = "<group>";
+		};
+		7C8D0E16262AF3BB00E2D435 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C8D0E17262AF3DC00E2D435 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +99,9 @@
 			dependencies = (
 			);
 			name = KDCalculator;
+			packageProductDependencies = (
+				7C8D0E12262AF1F700E2D435 /* StackKit */,
+			);
 			productName = KDCalculator;
 			productReference = 7C8D0DBF262A050900E2D435 /* KDCalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 7C8D0DB6262A050900E2D435;
+			packageReferences = (
+				7C8D0E11262AF1F700E2D435 /* XCRemoteSwiftPackageReference "StackKit" */,
+			);
 			productRefGroup = 7C8D0DC0262A050900E2D435 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +148,6 @@
 			files = (
 				7C8D0DCF262A050B00E2D435 /* LaunchScreen.storyboard in Resources */,
 				7C8D0DCC262A050B00E2D435 /* Assets.xcassets in Resources */,
-				7C8D0DCA262A050900E2D435 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,20 +161,15 @@
 				7C8D0DC7262A050900E2D435 /* ViewController.swift in Sources */,
 				7C8D0DC3262A050900E2D435 /* AppDelegate.swift in Sources */,
 				7C8D0DC5262A050900E2D435 /* SceneDelegate.swift in Sources */,
+				7C8D0E07262AE4C900E2D435 /* CalculatorKeypadView.swift in Sources */,
+				7C8D0E18262AF3DC00E2D435 /* UIViewExtensions.swift in Sources */,
+				7C8D0E04262AE28D00E2D435 /* KeypadButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7C8D0DC8262A050900E2D435 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C8D0DC9262A050900E2D435 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7C8D0DCD262A050B00E2D435 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C8D0E11262AF1F700E2D435 /* XCRemoteSwiftPackageReference "StackKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/charleshs/StackKit.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C8D0E12262AF1F700E2D435 /* StackKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C8D0E11262AF1F700E2D435 /* XCRemoteSwiftPackageReference "StackKit" */;
+			productName = StackKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C8D0DB7262A050900E2D435 /* Project object */;
 }

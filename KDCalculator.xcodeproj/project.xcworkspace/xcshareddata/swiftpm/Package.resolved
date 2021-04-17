@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "StackKit",
+        "repositoryURL": "https://github.com/charleshs/StackKit.git",
+        "state": {
+          "branch": "main",
+          "revision": "0a280bf1d1ecb4b17e3fd86d73d3ce0408520d9e",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
