@@ -2,7 +2,6 @@ import UIKit
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
     func application(
@@ -11,7 +10,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         if #available(iOS 13.0, *) { } else {
             window = UIWindow(frame: UIScreen.main.bounds)
-            window?.rootViewController = ViewController()
+            window?.rootViewController = CalculatorViewController()
             window?.makeKeyAndVisible()
 
             print("Launched by AppDelegate.")

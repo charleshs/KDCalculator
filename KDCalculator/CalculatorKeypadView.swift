@@ -2,11 +2,10 @@ import UIKit
 import StackKit
 
 public final class CalculatorKeypadView: UIView {
-
     private let clearButton = KeypadButton(text: "AC", kind: .secondary)
     private let negateButton = KeypadButton(text: "+/-", kind: .secondary)
     private let percentageButton = KeypadButton(text: "%", kind: .secondary)
-    
+
     private let num0Button = KeypadButton(text: "0", kind: .primary)
     private let num1Button = KeypadButton(text: "1", kind: .primary)
     private let num2Button = KeypadButton(text: "2", kind: .primary)
